@@ -1,6 +1,4 @@
 # dss_app.py - Aplikasi DSS Marketing Promotion Response
-# Versi Dinamis: Insight dan Rekomendasi Berbasis Data Aktual
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -387,7 +385,7 @@ def page_home():
     st.markdown("""
 <div class='hero-banner'>
     <div class='hero-title'>🎯 Marketing Promotion Response DSS</div>
-    <div class='hero-subtitle'>Sistem cerdas untuk memprediksi respons pelanggan & memberikan rekomendasi produk</div>
+    <div class='hero-subtitle'>Sistem Cerdas untuk Prediksi Respons dan Penentuan Prioritas Pelanggan Promosi</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -1133,4 +1131,5 @@ elif selection == "Target List Pelanggan":
 st.sidebar.markdown("---")
 st.sidebar.caption("Dikembangkan oleh: Tim DSS Marketing")
 st.sidebar.caption("Teknik Informatika UNPAD")
+
 st.sidebar.caption("**Mode:** Dinamis Berbasis Data")
