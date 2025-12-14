@@ -1,0 +1,323 @@
+/* =========================================================
+   🎓 Academic DSS Theme — Poster Style
+   Cream • Blue Slate • Clean • Professional
+   ========================================================= */
+
+/* ---------- ROOT COLOR SYSTEM ---------- */
+:root {
+    --primary: #4F5F71;          /* Blue slate */
+    --primary-dark: #3F5166;
+    --secondary: #6B86A6;
+    --accent: #9BB7CF;
+
+    --bg-main: #FBF7F2;          /* Cream background */
+    --bg-soft: #F3EFE8;
+    --bg-card: #FFFFFF;
+
+    --text-main: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #FFFFFF;
+
+    --border-soft: #D6D3CD;
+    --border-dashed: #BDB8AE;
+
+    --success: #2E7D32;
+    --warning: #ED6C02;
+    --danger: #C62828;
+}
+
+/* ---------- GLOBAL ---------- */
+html, body {
+    background-color: var(--bg-main) !important;
+    color: var(--text-main) !important;
+    font-family: "Inter", "Segoe UI", sans-serif !important;
+}
+
+.block-container {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+}
+
+/* ---------- HEADINGS ---------- */
+h1, h2, h3 {
+    color: var(--primary-dark) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.3px;
+}
+
+h4, h5 {
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+}
+
+h1 {
+    font-size: 36px !important;
+}
+
+h2 {
+    font-size: 28px !important;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+}
+
+/* ---------- TEXT ---------- */
+p, li {
+    font-size: 15px !important;
+    line-height: 1.65;
+    color: var(--text-main);
+}
+
+a {
+    color: var(--primary-dark) !important;
+    font-weight: 600;
+}
+
+/* ---------- SIDEBAR ---------- */
+section[data-testid="stSidebar"] {
+    background-color: var(--primary) !important;
+    border-right: 1px solid var(--border-soft);
+}
+
+section[data-testid="stSidebar"] * {
+    color: var(--text-light) !important;
+}
+
+.stSidebar .stButton > button {
+    background: var(--secondary) !important;
+    color: white !important;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 22px 24px;
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    margin-bottom: 22px;
+}
+
+/* ---------- HERO / SECTION BAR ---------- */
+.hero-banner {
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    margin-top: 10px;
+}
+
+/* ---------- METRIC ---------- */
+[data-testid="metric-container"] {
+    background: var(--bg-card) !important;
+    border-radius: 14px;
+    border: 1px solid var(--border-soft);
+    padding: 16px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    color: var(--primary-dark) !important;
+}
+
+[data-testid="stMetricLabel"] {
+    font-size: 14px !important;
+    color: var(--text-muted) !important;
+}
+
+[data-testid="stMetricDelta"] {
+    font-weight: 700;
+}
+
+/* ---------- TABLE ---------- */
+.stDataFrame {
+    border-radius: 14px !important;
+    border: 1px solid var(--border-soft);
+    overflow: hidden;
+}
+
+.dataframe th {
+    background: var(--primary) !important;
+    color: white !important;
+    font-weight: 700 !important;
+}
+
+.dataframe td {
+    background: var(--bg-card);
+}
+
+/* ---------- BUTTON ---------- */
+.stButton > button {
+    background: var(--primary) !important;
+    color: white !important;
+    border-radius: 10px !important;
+    padding: 12px 20px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    transition: 0.2s ease;
+}
+
+.stButton > button:hover {
+    background: var(--primary-dark) !important;
+    transform: translateY(-2px);
+}
+/* =========================================================
+   🔥 FORCE PRIMARY BUTTON TEXT COLOR (STREAMLIT FIX)
+   ========================================================= */
+
+/* Button primary */
+.stButton > button[kind="primary"] {
+    background: var(--primary) !important;
+}
+
+/* TEXT di DALAM button */
+.stButton > button[kind="primary"] * {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.4px;
+}
+
+/* Hover */
+.stButton > button[kind="primary"]:hover * {
+    color: #ffffff !important;
+}
+
+/* ---------- EXPANDER ---------- */
+.streamlit-expanderHeader {
+    background: var(--bg-soft) !important;
+    border-radius: 10px !important;
+    font-weight: 700;
+}
+
+/* FIX CHART KEPOTONG */
+.js-plotly-plot {
+    overflow: visible !important;
+}
+
+/* JAGA CONTAINER */
+[data-testid="stPlotlyChart"] {
+    overflow: visible !important;
+}
+
+/* ---------- FORM INPUT ---------- */
+.stTextInput > div > div > input,
+.stNumberInput > div > input,
+.stSelectbox > div > div {
+    background: var(--bg-card);
+    border-radius: 8px;
+    border: 1px solid var(--border-soft);
+}
+
+/* ---------- UTILITY ---------- */
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.muted {
+    color: var(--text-muted);
+}
+
+/* ---------- DASHED SEPARATOR ---------- */
+.dashed-divider {
+    border-left: 2px dashed var(--border-dashed);
+    height: 100%;
+}
+
+
+/* =========================================================
+   🌙 DARK MODE OVERRIDE — Auto Detect
+   ========================================================= */
+@media (prefers-color-scheme: dark) {
+
+    /* -------- ROOT OVERRIDE -------- */
+    :root {
+        --bg-main: #0f172a;        /* Dark navy */
+        --bg-soft: #111827;
+        --bg-card: #1f2937;
+
+        --text-main: #f1f5f9;     /* PUTIH */
+        --text-muted: #cbd5e1;
+        --text-light: #ffffff;
+
+        --border-soft: #334155;
+        --border-dashed: #475569;
+    }
+
+    /* -------- GLOBAL -------- */
+    html, body {
+        background-color: var(--bg-main) !important;
+        color: var(--text-main) !important;
+    }
+
+    p, li, span, label {
+        color: var(--text-main) !important;
+    }
+
+    h1, h2, h3, h4, h5 {
+        color: #f8fafc !important;
+    }
+
+    a {
+        color: #93c5fd !important;
+    }
+
+    section[data-testid="stSidebar"] * {
+        color: #f8fafc !important;
+    }
+
+    /* -------- CARD -------- */
+    .card {
+        background: var(--bg-card) !important;
+        border: 1px solid var(--border-soft);
+    }
+
+    /* -------- METRIC -------- */
+    [data-testid="metric-container"] {
+        background: var(--bg-card) !important;
+    }
+
+    [data-testid="stMetricValue"] {
+        color: #e5e7eb !important;
+    }
+
+    /* -------- TABLE -------- */
+    .dataframe td {
+        background: var(--bg-card) !important;
+        color: var(--text-main) !important;
+    }
+
+    .dataframe th {
+        background: #020617 !important;
+        color: #f8fafc !important;
+    }
+
+    /* -------- FORM INPUT -------- */
+    .stTextInput > div > div > input,
+    .stNumberInput > div > input,
+    .stSelectbox > div > div {
+        background: #020617 !important;
+        color: #f8fafc !important;
+        border: 1px solid var(--border-soft);
+    }
+
+    /* -------- EXPANDER -------- */
+    .streamlit-expanderHeader {
+        background: #020617 !important;
+        color: #f8fafc !important;
+    }
+
+    /* -------- CHART FIX -------- */
+    .js-plotly-plot,
+    [data-testid="stPlotlyChart"] {
+        background: var(--bg-card) !important;
+    }
+}
